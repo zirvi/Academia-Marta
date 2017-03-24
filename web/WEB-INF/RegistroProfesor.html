@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Altas Profesor</title>
+
+	<link rel="stylesheet" href="assets/demo.css">
+	<link rel="stylesheet" href="assets/form-register.css">
+
+</head>
+    <ul>
+        <li><a href="index.html">Basic</a></li>
+        <li><a href="RegistroProfesor.html" class="active">Altas Profesor</a></li>
+        <li><a href="Principal.html">Login</a></li>
+        
+    </ul>
+
+
+    <div class="main-content">
+
+        <!-- You only need this form and the form-register.css -->
+
+        <form class="form-register" method="post" action="/Restaurante/formularioServletCamarero">
+
+            <div class="form-register-with-email">
+
+                <div class="form-white-background">
+
+                    <div class="form-title-row">
+                        <h1>Alta Profesor</h1>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>idProfesor</span>
+                            <input type="text" name="idprofesor">
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Nombre Profesor</span>
+                            <input type="text" name="nombre_profesor">
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Apellido Profesor</span>
+                            <input type="text" name="apellido_profesor">
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label class="form-checkbox">
+                            <input type="checkbox" name="checkbox" checked>
+                            <span>Aceptar<a href="#">Volver al Index</a></span>
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <button type="submit">Registrar</button>
+                    </div>
+
+                </div>
+
+                <a href="index.html" class="form-log-in-with-existing">Estas registrado? Ir a Login</a>
+
+            </div>
+
+            <div class="form-sign-in-with-social">
+
+                <div class="form-row form-title-row">
+                    
+                </div>
+
+                <a href="#" class="form-google-button">Baja Camarero</a>
+                <a href="#" class="form-facebook-button">Buscar</a>
+                <a href="#" class="form-twitter-button">Actualizar Camarero</a>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
