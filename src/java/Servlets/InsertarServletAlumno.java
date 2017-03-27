@@ -23,15 +23,8 @@ public class InsertarServletAlumno extends HttpServlet {
         
         
             
-                //recupera el action del formulario (updateProfesor.html)
-                String action=request.getParameter("action");
-                
-                if(action.contains("update")){
-                    
-                BoAlumno.procesarUpdateAlumno(request, response);
-                }else{
                     BoAlumno.procesarInsertarPeticionAlumno(request, response);
-                }
+                
                 
             
               
