@@ -1,8 +1,8 @@
 
 package Servlets;
 
+
 import bo.academia.profesor.BoProfesor;
-import dao.academia.profesor.DaoProfesor;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.ResultSet;
@@ -20,16 +20,11 @@ public class InsertarServletProfesor extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, ClassNotFoundException, SQLException {
         
-        
-            
-                //recupera el action del formulario (updateProfesor.html)
-                String action=request.getParameter("action");
+           
                 
-                if(action.contains("update")){
-                BoProfesor.procesarUpdateProfesor(request, response);
-                }else{
-                    BoProfesor.procesarInsertarPeticionProfesor(request, response);
-                }
+                BoProfesor.procesarInsertarPeticionProfesor(request, response);
+            
+             
                 
             
               

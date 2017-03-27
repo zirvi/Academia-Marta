@@ -14,9 +14,9 @@
 
 </head>
     <ul>
-        <li><a href="index.html">Basic</a></li>
-        <li><a href="RegistroProfesor.html" class="active">Altas Profesor</a></li>
-        <li><a href="Principal.html">Login</a></li>
+        <li><a href="index.html">Index</a></li>
+        <li><a href="RegistroProfesor.html" class="active">Actualizar Profesor</a></li>
+        <li><a href="Principal.html">Usuario</a></li>
         
     </ul>
 
@@ -25,7 +25,7 @@
 
         <!-- You only need this form and the form-register.css -->
 
-        <form class="form-register" method="post" action="/Restaurante/formularioServletCamarero">
+        <form class="form-register" method="post" action="/Academia/InsertarServletProfesor">
 
             <div class="form-register-with-email">
 
@@ -55,6 +55,13 @@
                             <input type="text" name="apellido_profesor">
                         </label>
                     </div>
+                    
+                     <div class="form-row">
+                        <label>
+                            <span> DNI Profesor</span>
+                            <input type="text" name="dni_profesor">
+                        </label>
+                    </div>
 
                     <div class="form-row">
                         <label class="form-checkbox">
@@ -69,7 +76,7 @@
 
                 </div>
 
-                <a href="index.html" class="form-log-in-with-existing">Estas registrado? Ir a Login</a>
+                <a href="index.html" class="form-log-in-with-existing"></a>
 
             </div>
 
@@ -79,9 +86,7 @@
                     
                 </div>
 
-                <a href="#" class="form-google-button">Baja Camarero</a>
-                <a href="#" class="form-facebook-button">Buscar</a>
-                <a href="#" class="form-twitter-button">Actualizar Camarero</a>
+             
 
             </div>
 

@@ -13,7 +13,7 @@ public class ConectarAcademia {
 public static Connection ConectarAcademia() throws ClassNotFoundException, SQLException{
     
     String ruta="com.mysql.jdbc.Driver";
-    String url = "jdbc:mysql://localhost/restaurante";
+    String url = "jdbc:mysql://localhost/academia";
                 String user = "root";
                 String password = "root";
     

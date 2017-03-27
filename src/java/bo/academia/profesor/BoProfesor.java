@@ -22,7 +22,7 @@ public class BoProfesor {
     teacher.setApellido_profesor(request.getParameter ("apellido_profesor"));
     teacher.setDni_profesor(request.getParameter("dni_profesor"));
     DaoProfesor.insertarProfesor(teacher.getIdprofesor(),teacher.getNombre_profesor(), teacher.getApellido_profesor(),teacher.getDni_profesor());
-   //response.sendRedirect("/Restaurante/mostrarServletProfesor");
+    response.sendRedirect("/Academia/mostrarServletProfesor");
 }
     
     public static void procesarUpdateProfesor(HttpServletRequest request, HttpServletResponse response) throws ClassNotFoundException, SQLException, IOException{
