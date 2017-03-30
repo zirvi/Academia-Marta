@@ -7,7 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Altas de Alumno</title>
+	<title>Actualizar Alumno</title>
 
 	<link rel="stylesheet" href="assets/demo.css">
 	<link rel="stylesheet" href="assets/form-register.css">
@@ -15,7 +15,7 @@
 </head>
     <ul>
         <li><a href="index.html">Basic</a></li>
-        <li><a href="RegistroAlumno.html" class="active">Altas de Alumno</a></li>
+        <li><a href="ActualizarAlumno.html" class="active">Actualizar Alumno</a></li>
         <li><a href="Principal.html">Login</a></li>
         
     </ul>
@@ -25,14 +25,14 @@
 
         <!-- You only need this form and the form-register.css -->
 
-        <form class="form-register" method="post" action="/Academia/insertarServletAlumno">
+        <form class="form-register" method="post" action="/Academia/actualizarServletAlumno">
 
             <div class="form-register-with-email">
 
                 <div class="form-white-background">
 
                     <div class="form-title-row">
-                        <h1>Alta Alumno</h1>
+                        <h1>Actualizar Alumno</h1>
                     </div>
 
                     <div class="form-row">
@@ -62,6 +62,11 @@
                             <input type="text" name="dni_alumno">
                         </label>
                     </div>
+                    
+                     <!--Paso un valor oculto al controlador (actualizar)-->
+                    <div class="form-row">     
+                        <input type="hidden" name="action" value="actualizar">
+                    </div>
 
                     <div class="form-row">
                         <label class="form-checkbox">
@@ -76,7 +81,7 @@
 
                 </div>
 
-                <a href="index.html" class="form-log-in-with-existing"></a>
+                <a href="index.html" class="form-log-in-with-existing">Estas registrado</a>
 
             </div>
 

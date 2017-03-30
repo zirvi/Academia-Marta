@@ -31,11 +31,16 @@ public class BoProfesor {
         teacher.setIdprofesor(request.getParameter("idprofesor"));
         teacher.setNombre_profesor(request.getParameter("nombre_profesor"));
         teacher.setApellido_profesor(request.getParameter ("apellido_profesor"));
-        teacher.setDni_profesor(request.getParameter("dni_profesor"));
-        //REVISAR EL ACTUALIZAR, ME ESTA DANDO ERRORES
-        //DaoProfesor.actualizarProfesor(teacher.getIdprofesor(),teacher.getNombre_profesor(),teacher.getApellido_profesor(), teacher.getDni_profesor());
+        DaoProfesor.actualizarProfesor(teacher.getIdprofesor(),teacher.getNombre_profesor(),teacher.getApellido_profesor());
+        response.sendRedirect("/Academia/mostrarServletProfesor");
+    }
+    
+    public static void procesarBajaProfesor(HttpServletRequest request, HttpServletResponse response) throws ClassNotFoundException, SQLException, IOException{
         
-       
-        //response.sendRedirect("/Restaurante/Altas.htm");
+        profesor teacher=new profesor();
+         teacher.setIdprofesor(request.getParameter("idprofesor"));
+         DaoProfesor.BorrarProfesor(teacher.getIdprofesor());
+        //DaoProfesor.BorrarProfesor(teacher.getIdprofesor());
+        response.sendRedirect("/Academia/mostrarServletProfesor");   
     }
 }

@@ -25,7 +25,7 @@ public class BoAlumno {
     alum.setApellido_alumno(request.getParameter ("apellido_alumno"));
     alum.setDni_alumno(request.getParameter("dni_alumno"));
     DaoAlumno.insertarAlumno(alum.getIdalumno(),alum.getNombre_alumno(), alum.getApellido_alumno(),alum.getDni_alumno());
-   //response.sendRedirect("/Restaurante/mostrarServletProfesor");
+    response.sendRedirect("/Academia/mostrarServletAlumno");
 }
     
     public static void procesarUpdateAlumno(HttpServletRequest request, HttpServletResponse response) throws ClassNotFoundException, SQLException, IOException{
@@ -35,10 +35,18 @@ public class BoAlumno {
         alum.setNombre_alumno(request.getParameter("nombre_alumno"));
         alum.setApellido_alumno(request.getParameter ("apellido_alumno"));
         alum.setDni_alumno(request.getParameter("dni_alumno"));
-        //REVISAR EL ACTUALIZAR, ME ESTA DANDO ERRORES
-        //DaoAlumno.actualizarAlumno(teacher.getIdalumno(),teacher.getNombre_alumno(),teacher.getApellido_alumno(), teacher.getDni_alumno());
-        
-       
-        //response.sendRedirect("/Restaurante/Altas.htm");
+        DaoAlumno.actualizarAlumno(alum.getIdalumno(),alum.getNombre_alumno(), alum.getApellido_alumno(),alum.getDni_alumno() );
+        response.sendRedirect("/Academia/mostrarServletAlumno");
     }
+    
+    public static void procesarBajaAlumno(HttpServletRequest request, HttpServletResponse response) throws ClassNotFoundException, SQLException, IOException{
+        
+        alumno alum=new alumno();
+        alum.setIdalumno(request.getParameter("idalumno"));
+        alum.setNombre_alumno(request.getParameter("nombre_alumno"));
+        alum.setApellido_alumno(request.getParameter("apellido_alumno"));
+        alum.setDni_alumno(request.getParameter("dni_alumno"));
+        DaoAlumno.BorrarAlumno(alum.getIdalumno(), alum.getNombre_alumno(), alum.getApellido_alumno(), alum.getDni_alumno());
+        response.sendRedirect("mostrarServletAlumno");
+}
 }

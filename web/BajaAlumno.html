@@ -7,7 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Altas de Alumno</title>
+	<title>Baja de Alumno</title>
 
 	<link rel="stylesheet" href="assets/demo.css">
 	<link rel="stylesheet" href="assets/form-register.css">
@@ -15,7 +15,7 @@
 </head>
     <ul>
         <li><a href="index.html">Basic</a></li>
-        <li><a href="RegistroAlumno.html" class="active">Altas de Alumno</a></li>
+        <li><a href="BajaAlumno.html" class="active">Baja de Alumno</a></li>
         <li><a href="Principal.html">Login</a></li>
         
     </ul>
@@ -25,14 +25,14 @@
 
         <!-- You only need this form and the form-register.css -->
 
-        <form class="form-register" method="post" action="/Academia/insertarServletAlumno">
+        <form class="form-register" method="post" action="bajaServletAlumno">
 
             <div class="form-register-with-email">
 
                 <div class="form-white-background">
 
                     <div class="form-title-row">
-                        <h1>Alta Alumno</h1>
+                        <h1>Baja Alumno</h1>
                     </div>
 
                     <div class="form-row">
@@ -42,28 +42,12 @@
                         </label>
                     </div>
 
-                    <div class="form-row">
-                        <label>
-                            <span>Nombre Alumno</span>
-                            <input type="text" name="nombre_alumno">
-                        </label>
+                   <div class="form-row">     
+                        <input type="hidden" name="action" value="borrar">
                     </div>
 
-                    <div class="form-row">
-                        <label>
-                            <span>Apellido Alumno</span>
-                            <input type="text" name="apellido_alumno">
-                        </label>
-                    </div>
-                    
-                    <div class="form-row">
-                        <label>
-                            <span>Dni Alumno</span>
-                            <input type="text" name="dni_alumno">
-                        </label>
-                    </div>
 
-                    <div class="form-row">
+                   <!-- <div class="form-row">
                         <label class="form-checkbox">
                             <input type="checkbox" name="checkbox" checked>
                             <span>Aceptar<a href="#">Volver al Index</a></span>
@@ -71,12 +55,16 @@
                     </div>
 
                     <div class="form-row">
-                        <button type="submit">Registrar</button>
+                        <button type="submit">Dar de baja</button>
                     </div>
 
-                </div>
+                </div>-->
+                   
+                   <div class="form-row">
+                        <button type="submit">Borrar</button>
+                    </div>
 
-                <a href="index.html" class="form-log-in-with-existing"></a>
+                <a href="index.html" class="form-log-in-with-existing">Entra aquí</a>
 
             </div>
 

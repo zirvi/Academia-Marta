@@ -7,16 +7,16 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Altas de Alumno</title>
+	<title>Altas Profesor</title>
 
 	<link rel="stylesheet" href="assets/demo.css">
 	<link rel="stylesheet" href="assets/form-register.css">
 
 </head>
     <ul>
-        <li><a href="index.html">Basic</a></li>
-        <li><a href="RegistroAlumno.html" class="active">Altas de Alumno</a></li>
-        <li><a href="Principal.html">Login</a></li>
+        <li><a href="index.html">Index</a></li>
+        <li><a href="BajaProfesor.html" class="active">Baja Profesor</a></li>
+        <li><a href="Principal.html">Usuario</a></li>
         
     </ul>
 
@@ -25,41 +25,42 @@
 
         <!-- You only need this form and the form-register.css -->
 
-        <form class="form-register" method="post" action="/Academia/insertarServletAlumno">
+        <form class="form-register" method="post" action="/Academia/BajaServletProfesor">
 
             <div class="form-register-with-email">
 
                 <div class="form-white-background">
 
                     <div class="form-title-row">
-                        <h1>Alta Alumno</h1>
+                        <h1>Baja Profesor</h1>
                     </div>
 
                     <div class="form-row">
                         <label>
-                            <span>idalumno</span>
-                            <input type="text" name="idalumno">
+                            <span>idProfesor</span>
+                            <!--el name es el valor que introduce el usuario-->
+                            <input type="text" name="idprofesor">
                         </label>
                     </div>
 
                     <div class="form-row">
                         <label>
-                            <span>Nombre Alumno</span>
-                            <input type="text" name="nombre_alumno">
+                            <span>Nombre Profesor</span>
+                            <input type="text" name="nombre_profesor">
                         </label>
                     </div>
 
                     <div class="form-row">
                         <label>
-                            <span>Apellido Alumno</span>
-                            <input type="text" name="apellido_alumno">
+                            <span>Apellido Profesor</span>
+                            <input type="text" name="apellido_profesor">
                         </label>
                     </div>
                     
-                    <div class="form-row">
+                     <div class="form-row">
                         <label>
-                            <span>Dni Alumno</span>
-                            <input type="text" name="dni_alumno">
+                            <span> DNI Profesor</span>
+                            <input type="text" name="dni_profesor">
                         </label>
                     </div>
 
@@ -71,8 +72,9 @@
                     </div>
 
                     <div class="form-row">
-                        <button type="submit">Registrar</button>
-                    </div>
+                        <button type="submit">Dar de baja</button>
+                    </div> 
+
 
                 </div>
 
@@ -83,12 +85,10 @@
             <div class="form-sign-in-with-social">
 
                 <div class="form-row form-title-row">
-                    <span class="form-title">Administracion</span>
+                    
                 </div>
 
-                <a href="#" class="form-google-button">Baja Alumno</a>
-                <a href="#" class="form-facebook-button">Buscar</a>
-                <a href="#" class="form-twitter-button">Actualizar Alumno</a>
+             
 
             </div>
 

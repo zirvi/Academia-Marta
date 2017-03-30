@@ -21,15 +21,9 @@ public class InsertarServletProfesor extends HttpServlet {
             throws ServletException, IOException, ClassNotFoundException, SQLException {
         
            
-                
                 BoProfesor.procesarInsertarPeticionProfesor(request, response);
             
-             
-                
-            
-              
-           
-    }
+ }
 
   
     @Override

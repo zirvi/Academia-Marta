@@ -29,7 +29,7 @@ public class DaoProfesor {
     public static void actualizarProfesor(String nombre_profesor, String apellido_profesor, String idprofesor) throws ClassNotFoundException, SQLException{
         
         Connection conexion=ConectarAcademia.ConectarAcademia();
-        String sql="update profesor set nombre_profesor=? and apellido_profesor=? where idprofesor=?";
+        String sql="update profesor set nombre_profesor=? , apellido_profesor=? where idprofesor=?";
         PreparedStatement sentencia=conexion.prepareStatement(sql);
         sentencia.setString(1, nombre_profesor);
         sentencia.setString(2, apellido_profesor);
@@ -45,23 +45,21 @@ public class DaoProfesor {
     
       Connection conexion=ConectarAcademia.ConectarAcademia();
       Statement sentencia = conexion.createStatement();
-      String consultaSQL = "select idprofesor,nombre_profesor,apellido_profesor, dni_profesor from profesor";
+      String consultaSQL = "select idprofesor,nombre_profesor,apellido_profesor,dni_profesor from profesor";
       ResultSet lista_profesor=sentencia.executeQuery(consultaSQL);
       return lista_profesor;
     
     
 }
     
-    public static void BorrarProfesor(String nombre_profesor, String apellido_profesor, String idprofesor) throws ClassNotFoundException, SQLException{
+    public static void BorrarProfesor(String idprofesor) throws ClassNotFoundException, SQLException{
       Connection conexion=ConectarAcademia.ConectarAcademia();
-      Statement sentencia = conexion.createStatement();
+      //Statement sentencia = conexion.createStatement();
       String consultaSQL="delete from profesor where idprofesor=? ";
       PreparedStatement borrar=conexion.prepareStatement(consultaSQL);
-      borrar.setString(1, nombre_profesor);
-      borrar.setString(2, apellido_profesor);
-      borrar.setString(3, idprofesor);
-      int filas=sentencia.executeUpdate(consultaSQL);
+      borrar.setString(1, idprofesor);
+      int filas=borrar.executeUpdate(consultaSQL);
       System.out.println("Numero de filas insertadas:"+filas);
-      sentencia.close();
+      conexion.close();
     }
 }

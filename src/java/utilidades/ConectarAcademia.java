@@ -14,8 +14,8 @@ public static Connection ConectarAcademia() throws ClassNotFoundException, SQLEx
     
     String ruta="com.mysql.jdbc.Driver";
     String url = "jdbc:mysql://localhost/academia";
-                String user = "root";
-                String password = "root";
+    String user = "root";
+    String password = "root";
     
     Class.forName(ruta);
     conexion=DriverManager.getConnection(url,user,password);

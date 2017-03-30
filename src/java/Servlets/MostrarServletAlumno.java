@@ -33,9 +33,9 @@ public class MostrarServletAlumno extends HttpServlet {
             
             while(rs.next()){
               
-           out.println("<p> IdProfesor: "+rs.getString(1)+"</p>");
-           out.println("<p> Nombre"+rs.getString(2)+"</p>");
-           out.println("<p> Apellido"+rs.getString(3)+"</p>");
+           out.println("<p> IdAlumno: "+rs.getString(1)+"</p>");
+           out.println("<p> Nombre del Alumno: "+rs.getString(2)+"</p>");
+           out.println("<p> Apellido del Alumno: "+rs.getString(3)+"</p>");
               
            } 
             out.println("</body>");
