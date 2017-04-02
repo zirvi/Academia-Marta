@@ -22,25 +22,27 @@ public class BoProfesor {
     teacher.setApellido_profesor(request.getParameter ("apellido_profesor"));
     teacher.setDni_profesor(request.getParameter("dni_profesor"));
     DaoProfesor.insertarProfesor(teacher.getIdprofesor(),teacher.getNombre_profesor(), teacher.getApellido_profesor(),teacher.getDni_profesor());
-    response.sendRedirect("/Academia/mostrarServletProfesor");
+    response.sendRedirect("/Academia/MostrarServletProfesor");
 }
     
-    public static void procesarUpdateProfesor(HttpServletRequest request, HttpServletResponse response) throws ClassNotFoundException, SQLException, IOException{
+    public static void procesarUpdatePeticionProfesor(HttpServletRequest request, HttpServletResponse response) throws ClassNotFoundException, SQLException, IOException{
     
         profesor teacher=new profesor();
-        teacher.setIdprofesor(request.getParameter("idprofesor"));
+       
         teacher.setNombre_profesor(request.getParameter("nombre_profesor"));
         teacher.setApellido_profesor(request.getParameter ("apellido_profesor"));
-        DaoProfesor.actualizarProfesor(teacher.getIdprofesor(),teacher.getNombre_profesor(),teacher.getApellido_profesor());
-        response.sendRedirect("/Academia/mostrarServletProfesor");
+         teacher.setApellido_profesor(request.getParameter ("dni_profesor"));
+          teacher.setIdprofesor(request.getParameter("idprofesor"));
+        DaoProfesor.actualizarProfesor(teacher.getNombre_profesor(),teacher.getApellido_profesor(),teacher.getDni_profesor(),teacher.getIdprofesor());
+        response.sendRedirect("/Academia/MostrarServletProfesor");
     }
     
-    public static void procesarBajaProfesor(HttpServletRequest request, HttpServletResponse response) throws ClassNotFoundException, SQLException, IOException{
+    public static void procesarBajaPeticionProfesor(HttpServletRequest request, HttpServletResponse response) throws ClassNotFoundException, SQLException, IOException{
         
         profesor teacher=new profesor();
          teacher.setIdprofesor(request.getParameter("idprofesor"));
-         DaoProfesor.BorrarProfesor(teacher.getIdprofesor());
-        //DaoProfesor.BorrarProfesor(teacher.getIdprofesor());
-        response.sendRedirect("/Academia/mostrarServletProfesor");   
+         DaoProfesor.borrarProfesor(teacher.getIdprofesor());
+        
+        response.sendRedirect("/Academia/MostrarServletProfesor");   
     }
 }

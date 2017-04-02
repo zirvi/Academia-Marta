@@ -37,7 +37,7 @@ public class LogAcademia extends HttpServlet {
         sesionLogin.setAttribute("password", passLogin);
         sesionLogin.setAttribute("ok", log);
         
-        response.sendRedirect("/Academia/altas.htm");
+        response.sendRedirect("/Academia/gestion.html");
         } else{
         response.sendRedirect("/Academia/Principal.html"); 
     }

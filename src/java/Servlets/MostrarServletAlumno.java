@@ -26,22 +26,25 @@ public class MostrarServletAlumno extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet ServletProfesor</title>");            
+            out.println("<title>Servlet ServletAlumno</title>");            
             out.println("</head>");
             out.println("<body>");
             out.println("<h1> Mostrar lista alumnos " + request.getContextPath() + "</h1>");
             
             while(rs.next()){
-              
-           out.println("<p> IdAlumno: "+rs.getString(1)+"</p>");
-           out.println("<p> Nombre del Alumno: "+rs.getString(2)+"</p>");
-           out.println("<p> Apellido del Alumno: "+rs.getString(3)+"</p>");
-              
-           } 
-            out.println("</body>");
-            out.println("</html>");
+           out.println("<p> IdAlumno: "+rs.getString("idalumno")+"</p>");
+           out.println("<p> Nombre del Alumno: "+rs.getString("nombre_alumno")+"</p>");
+           out.println("<p> Apellido del Alumno: "+rs.getString("apellido_alumno")+"</p>");
+           out.println("<p> Dni del Alumno: "+rs.getString("dni_alumno")+"</p>");
+            out.println("<p>--------------------</p>");
+
+        }
+        out.println("<a href=RegistroAlumno.html>Formulario Alumno</>");
+        out.println("</body>");
+        out.println("</html>");
         }
     }
+        
 
   
     @Override

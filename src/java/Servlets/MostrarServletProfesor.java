@@ -18,7 +18,8 @@ public class MostrarServletProfesor extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, ClassNotFoundException, SQLException {
         
-        ResultSet rs=DaoProfesor.verProfesor();
+         ResultSet rs=DaoProfesor.verProfesor();
+         
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
            
@@ -31,18 +32,19 @@ public class MostrarServletProfesor extends HttpServlet {
             out.println("<h1> Mostrar lista profesores " + request.getContextPath() + "</h1>");
             
             while(rs.next()){
-              
-           out.println("<p> IdProfesor: "+rs.getString(1)+"</p>");
-           out.println("<p> Nombre"+rs.getString(2)+"</p>");
-           out.println("<p> Apellido"+rs.getString(3)+"</p>");
-           
-              
-           } 
-            out.println("</body>");
-            out.println("</html>");
+           out.println("<p> Id Profesor: "+rs.getString("idprofesor")+"</p>");
+           out.println("<p> Nombre del Profesor: "+rs.getString("nombre_profesor")+"</p>");
+           out.println("<p> Apellido del Profesor: "+rs.getString("apellido_profesor")+"</p>");
+           out.println("<p> Dni del Profesor: "+rs.getString("dni_profesor")+"</p>");
+            out.println("<p>--------------------</p>");
+
+        }
+        out.println("<a href=RegistroProfesor.html>Formulario Profesor</>");
+        out.println("</body>");
+        out.println("</html>");
         }
     }
-
+        
   
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)

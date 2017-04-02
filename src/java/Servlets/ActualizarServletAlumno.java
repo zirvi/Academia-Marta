@@ -1,10 +1,5 @@
-package Servlets;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+package Servlets;
 
 import bo.academia.alumno.BoAlumno;
 import java.io.IOException;
@@ -22,10 +17,9 @@ public class ActualizarServletAlumno extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, ClassNotFoundException, SQLException {
-        
-                BoAlumno.procesarUpdateAlumno(request, response);
-        }
-    
+       
+        BoAlumno.procesarUpdatePeticionAlumno(request, response);
+    }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

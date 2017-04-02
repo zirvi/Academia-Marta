@@ -1,106 +1,88 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+    <head>
 
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Actualizar Alumno</title>
+        <title>Altas de Alumno</title>
 
-	<link rel="stylesheet" href="assets/demo.css">
-	<link rel="stylesheet" href="assets/form-register.css">
+        <link rel="stylesheet" href="assets/demo.css">
+        <link rel="stylesheet" href="assets/form-register.css">
 
-</head>
-    <ul>
-        <li><a href="index.html">Basic</a></li>
-        <li><a href="ActualizarAlumno.html" class="active">Actualizar Alumno</a></li>
-        <li><a href="Principal.html">Login</a></li>
-        
-    </ul>
+    </head>
+    <body>
+        <ul>
+             <li> <a href="index.html">Inicio</a> </li>
+            <li><a href="RegistroAlumno.html" >Alta Alumno</a></li>
+            <li><a href="/Academia/MostrarServletAlumno" >Mostrar Alumnos</a></li>
+            <li><a href="ActualizarAlumno.html" class="active">Actualizar Alumno</a></li>
+            <li><a href="BajaAlumno.html">Baja Alumno</a></li>
+
+        </ul>
 
 
-    <div class="main-content">
+        <div class="main-content">
 
-        <!-- You only need this form and the form-register.css -->
+            <!-- You only need this form and the form-register.css -->
 
-        <form class="form-register" method="post" action="/Academia/actualizarServletAlumno">
+            <form class="form-register" method="post" action="/Academia/ActualizarServletAlumno">
 
-            <div class="form-register-with-email">
+                <div class="form-register-with-email">
 
-                <div class="form-white-background">
+                    <div class="form-white-background">
 
-                    <div class="form-title-row">
-                        <h1>Actualizar Alumno</h1>
+                        <div class="form-title-row">
+                            <h1>Actualizar Alumno</h1>
+                        </div>
+
+
+                        <div class="form-row">
+                            <label>
+                                <span>Nombre</span>
+                                <input type="text" name="nombre_alumno">
+                            </label>
+                        </div>
+
+                        <div class="form-row">
+                            <label>
+                                <span>Apellido</span>
+                                <input type="text" name="apellido_alumno">
+                            </label>
+                        </div>
+
+                        <div class="form-row">
+                            <label>
+                                <span>Dni</span>
+                                <input type="text" name="dni_alumno">
+                            </label>
+                        </div>
+                        <div class="form-row">
+                            <label>
+                                <span>ID Alumno</span>
+                                <input type="text" name="idalumno">
+                            </label>
+                        </div>
+                       
+
+                        <div class="form-row">
+                            <button type="submit">Registrar</button>
+                        </div>
+
                     </div>
 
-                    <div class="form-row">
-                        <label>
-                            <span>idalumno</span>
-                            <input type="text" name="idalumno">
-                        </label>
-                    </div>
-
-                    <div class="form-row">
-                        <label>
-                            <span>Nombre Alumno</span>
-                            <input type="text" name="nombre_alumno">
-                        </label>
-                    </div>
-
-                    <div class="form-row">
-                        <label>
-                            <span>Apellido Alumno</span>
-                            <input type="text" name="apellido_alumno">
-                        </label>
-                    </div>
-                    
-                    <div class="form-row">
-                        <label>
-                            <span>Dni Alumno</span>
-                            <input type="text" name="dni_alumno">
-                        </label>
-                    </div>
-                    
-                     <!--Paso un valor oculto al controlador (actualizar)-->
-                    <div class="form-row">     
-                        <input type="hidden" name="action" value="actualizar">
-                    </div>
-
-                    <div class="form-row">
-                        <label class="form-checkbox">
-                            <input type="checkbox" name="checkbox" checked>
-                            <span>Aceptar<a href="#">Volver al Index</a></span>
-                        </label>
-                    </div>
-
-                    <div class="form-row">
-                        <button type="submit">Registrar</button>
-                    </div>
+                  
 
                 </div>
 
-                <a href="index.html" class="form-log-in-with-existing">Estas registrado</a>
+             
 
-            </div>
+            </form>
 
-            <div class="form-sign-in-with-social">
+        </div>
 
-                <div class="form-row form-title-row">
-                    <span class="form-title">Administracion</span>
-                </div>
-
-                <a href="#" class="form-google-button">Baja Alumno</a>
-                <a href="#" class="form-facebook-button">Buscar</a>
-                <a href="#" class="form-twitter-button">Actualizar Alumno</a>
-
-            </div>
-
-        </form>
-
-    </div>
-
-</body>
+    </body>
 
 </html>

@@ -13,10 +13,13 @@
 	<link rel="stylesheet" href="assets/form-register.css">
 
 </head>
+<body>
     <ul>
-        <li><a href="index.html">Basic</a></li>
-        <li><a href="RegistroAlumno.html" class="active">Altas de Alumno</a></li>
-        <li><a href="Principal.html">Login</a></li>
+         <li> <a href="index.html">Inicio</a> </li>
+         <li><a href="RegistroAlumno.html" class="active">Alta Alumno</a></li>
+        <li><a href="/Academia/MostrarServletAlumno" >Mostrar Alumnos</a></li>
+        <li><a href="ActualizarAlumno.html">Actualizar Alumno</a></li>
+        <li><a href="BajaAlumno.html">Baja Alumno</a></li>
         
     </ul>
 
@@ -25,7 +28,7 @@
 
         <!-- You only need this form and the form-register.css -->
 
-        <form class="form-register" method="post" action="/Academia/insertarServletAlumno">
+        <form class="form-register" method="post" action="/Academia/InsertarServletAlumno">
 
             <div class="form-register-with-email">
 
@@ -63,12 +66,7 @@
                         </label>
                     </div>
 
-                    <div class="form-row">
-                        <label class="form-checkbox">
-                            <input type="checkbox" name="checkbox" checked>
-                            <span>Aceptar<a href="#">Volver al Index</a></span>
-                        </label>
-                    </div>
+                   
 
                     <div class="form-row">
                         <button type="submit">Registrar</button>
@@ -76,21 +74,11 @@
 
                 </div>
 
-                <a href="index.html" class="form-log-in-with-existing"></a>
+               
 
             </div>
 
-            <div class="form-sign-in-with-social">
-
-                <div class="form-row form-title-row">
-                    <span class="form-title">Administracion</span>
-                </div>
-
-                <a href="#" class="form-google-button">Baja Alumno</a>
-                <a href="#" class="form-facebook-button">Buscar</a>
-                <a href="#" class="form-twitter-button">Actualizar Alumno</a>
-
-            </div>
+          
 
         </form>
 

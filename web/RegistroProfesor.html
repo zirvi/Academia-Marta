@@ -13,19 +13,20 @@
 	<link rel="stylesheet" href="assets/form-register.css">
 
 </head>
-    <ul>
-        <li><a href="index.html">Index</a></li>
-        <li><a href="RegistroProfesor.html" class="active">Actualizar Profesor</a></li>
-        <li><a href="Principal.html">Usuario</a></li>
-        
-    </ul>
+        <ul>
+             <li> <a href="index.html">Inicio</a> </li>
+            <li><a href="RegistroProfesor.html" class="active" >Alta Profesor</a></li>
+            <li><a href="/Academia/MostrarServletProfesor" >Mostrar Profesores</a></li>
+            <li><a href="ActualizarProfesor.html" >Actualizar Profesor</a></li>
+            <li><a href="BajaProfesor.html" >Baja Profesor</a></li>
 
+        </ul>
 
     <div class="main-content">
 
         <!-- You only need this form and the form-register.css -->
 
-        <form class="form-register" method="post" action="/Academia/insertarServletProfesor">
+        <form class="form-register" method="post" action="/Academia/InsertarServletProfesor">
 
             <div class="form-register-with-email">
 
@@ -64,12 +65,7 @@
                         </label>
                     </div>
 
-                    <div class="form-row">
-                        <label class="form-checkbox">
-                            <input type="checkbox" name="checkbox" checked>
-                            <span>Aceptar<a href="#">Volver al Index</a></span>
-                        </label>
-                    </div>
+                   
 
                     <div class="form-row">
                         <button type="submit">Registrar</button>
@@ -77,19 +73,11 @@
 
                 </div>
 
-                <a href="index.html" class="form-log-in-with-existing"></a>
+                
 
             </div>
 
-            <div class="form-sign-in-with-social">
-
-                <div class="form-row form-title-row">
-                    
-                </div>
-
-             
-
-            </div>
+          
 
         </form>
 

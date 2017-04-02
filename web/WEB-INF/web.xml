@@ -1,36 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
-        <servlet-name>MostrarServletProfesor</servlet-name>
-        <servlet-class>Servlets.MostrarServletProfesor</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>MostrarServletAlumno</servlet-name>
-        <servlet-class>Servlets.MostrarServletAlumno</servlet-class>
+        <servlet-name>InsertarServletAlumno</servlet-name>
+        <servlet-class>Servlets.InsertarServletAlumno</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>BajaServletProfesor</servlet-name>
         <servlet-class>Servlets.BajaServletProfesor</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InsertarServletAlumno</servlet-name>
+        <url-pattern>/InsertarServletAlumno</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>MostrarServletAlumno</servlet-name>
+        <servlet-class>Servlets.MostrarServletAlumno</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>BajaServletAlumno</servlet-name>
         <servlet-class>Servlets.BajaServletAlumno</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>ActualizarServletAlumno</servlet-name>
-        <servlet-class>Servlets.ActualizarServletAlumno</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>ActualizarServletProfesor</servlet-name>
         <servlet-class>Servlets.ActualizarServletProfesor</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>MostrarServletProfesor</servlet-name>
-        <url-pattern>/mostrarServletProfesor</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
         <servlet-name>MostrarServletAlumno</servlet-name>
-        <url-pattern>/mostrarServletAlumno</url-pattern>
+        <url-pattern>/MostrarServletAlumno</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ActualizarServletAlumno</servlet-name>
+        <servlet-class>Servlets.ActualizarServletAlumno</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ActualizarServletAlumno</servlet-name>
+        <url-pattern>/ActualizarServletAlumno</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>InsertarServletProfesor</servlet-name>
@@ -38,31 +42,35 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>InsertarServletProfesor</servlet-name>
-        <url-pattern>/insertarServletProfesor</url-pattern>
+        <url-pattern>/InsertarServletProfesor</url-pattern>
     </servlet-mapping>
     <servlet>
-        <servlet-name>InsertarServletAlumno</servlet-name>
-        <servlet-class>Servlets.InsertarServletAlumno</servlet-class>
+        <servlet-name>MostrarServletProfesor</servlet-name>
+        <servlet-class>Servlets.MostrarServletProfesor</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>InsertarServletAlumno</servlet-name>
-        <url-pattern>/insertarServletAlumno</url-pattern>
+        <servlet-name>MostrarServletProfesor</servlet-name>
+        <url-pattern>/MostrarServletProfesor</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>LogAcademia</servlet-name>
+        <servlet-class>Servlets.LogAcademia</servlet-class>
+    </servlet>
     <servlet-mapping>
-        <servlet-name>BajaServletProfesor</servlet-name>
-        <url-pattern>/bajaServletProfesor</url-pattern>
+        <servlet-name>LogAcademia</servlet-name>
+        <url-pattern>/LogAcademia</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>BajaServletAlumno</servlet-name>
-        <url-pattern>/bajaServletAlumno</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>ActualizarServletAlumno</servlet-name>
-        <url-pattern>/actualizarServletAlumno</url-pattern>
+        <url-pattern>/BajaServletAlumno</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ActualizarServletProfesor</servlet-name>
-        <url-pattern>/actualizarServletProfesor</url-pattern>
+        <url-pattern>/ActualizarServletProfesor</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BajaServletProfesor</servlet-name>
+        <url-pattern>/BajaServletProfesor</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
